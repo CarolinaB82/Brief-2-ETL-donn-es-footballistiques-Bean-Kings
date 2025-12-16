@@ -9,3 +9,4 @@ services:
     volumes:
       - ./etl:/etl
       - ./data:/data:ro
+      - ./db:/db
