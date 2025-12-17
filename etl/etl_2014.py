@@ -43,3 +43,11 @@ COUNTRY_FIX_MAP = {
     "china pr": "china"
 }
 
+def clean_text(value, default="Unknown"):
+    if pd.isna(value) or str(value).strip() == "":
+        logger.warning("Valeur manquante remplacée par %s", default)
+        return default
+
+    value = str(value).strip().lower()
+    value = unidecode(value)
+    return value
