@@ -33,3 +33,13 @@ STAGE_MAP = {
     "final": "final",
     "play-off for third place": "play-off for third place",
 }
+
+COUNTRY_FIX_MAP = {
+    'rn">bosnia and herzegovina': "bosnia and herzegovina",
+    "ci? 1/2te d'ivoire": "ivory coast",
+    "ir iran": "iran",
+    "korea republic": "south korea",
+    "usa": "united states",
+    "china pr": "china"
+}
+
