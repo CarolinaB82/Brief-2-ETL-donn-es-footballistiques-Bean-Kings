@@ -1,0 +1,5 @@
+etl/__pycache__/*
+temp.py
+etl_worldcup.log
+db/
+__pycache__/
