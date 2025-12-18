@@ -1,3 +1,5 @@
+import duckdb
+
 VIEW = """ 
 CREATE OR REPLACE VIEW v_matches_flat AS
 SELECT
@@ -31,3 +33,10 @@ JOIN Teams th ON th.team_id = ph.team_id
 JOIN Plays pa ON pa.match_id = m.match_id AND pa.position_ = 'away'
 JOIN Teams ta ON ta.team_id = pa.team_id;
 """
+
+
+def create_view(df, db_path="./db/db.duckdb"):
+    con = duckdb.connect(db_path)
+    con.execute(VIEW)
+    con.commit()
+    con.close()
